@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class ATMConfig {
     @Bean
     public DataSource dataSource() {
-        return new DataSourceDB();
+        return new DataSourceFile("customers.txt");
     }
     @Bean
     public Bank bank() {
